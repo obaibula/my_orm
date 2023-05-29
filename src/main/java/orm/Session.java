@@ -228,6 +228,7 @@ public class Session {
                 """, tableName, idFieldName);
     }
 
+    // todo: refactor(?) the methods that prepare queries into separate private class in this file
     private String prepareUpdateSqlQuery(Object cacheEntity) {
         Class<?> type = cacheEntity.getClass();
         String tableName = getTableNameFromAnnotationTable(type);
